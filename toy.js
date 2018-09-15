@@ -8,18 +8,20 @@
 // Sam Harris => S.H
 //
 // Patrick Feeney => P.F
-const x= "John";
-const y= "Smith";
 
-const initials=(x,y)=>{
 
-    
+const init = (name) => {
+    const n = name.split(' ');
+    return (n[0][0] + '.' + n[1][0]).toUpperCase();
 }
+
 
 // 2
 // Write function makeUpperCase.
 
-//////////////////////////////////////////////////////
+makeUpperCase =()=>{
+    
+}
 
 //3
 // What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
