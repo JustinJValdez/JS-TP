@@ -18,9 +18,9 @@ const init = (name) => {
 // 2
 // Write function makeUpperCase.
 
-makeUpperCase =(n)=>{
+makeUpperCase = (n) => {
     let stuff = n.split('');
-    let toUpper = word.map(letter=>{return letter.toUpperCase()})
+    let toUpper = word.map(letter => { return letter.toUpperCase() })
     return toUpper.join('');
 
 }
@@ -35,22 +35,32 @@ makeUpperCase =(n)=>{
 // Note: String will have at least one element; words will always be separated by a space.
 
 
-const addLength=(string)=>{
+const addLength = (string) => {
     let n = string.split(' ');
-    let numbers = n.map(number=>{return number.length})
-    let ret=[];
-   for(let i=0;i<n.length;i++){
-        ret.push(n[i]+' '+numbers[i])
-   } 
-   return ret.join(' ')
+    let numbers = n.map(number => { return number.length })
+    let ret = [];
+    for (let i = 0; i < n.length; i++) {
+        ret.push(n[i] + ' ' + numbers[i])
+    }
+    return ret.join(' ')
 
 }
 
 //4
 // Who likes keywords? Nobody likes keywords, so why use them?
 //
-// You know what keyword I use too much? if! We should make a function called _if, with its arguments as a logical test and two functions/lambdas where the first function is executed if the boolean is true, and the second if it's false, like an if/else statement, so that we don't have to mess around with those nasty keywords! Even so, It should support truthy/falsy types just like the keyword.
+// You know what keyword I use too much? if! We should make a function called _if, 
+//with its arguments as a logical test and two functions/lambdas where the first function is executed if the boolean is true, 
+//and the second if it's false, like an if/else statement, so that we don't have to mess around with those nasty keywords! 
+//Even so, It should support truthy/falsy types just like the keyword.
 
+const _if = (b, cb1, cb2) => {
+    if (b) {
+        return cb1
+    } else if (!b) {
+        return cb2
+    }
+}
 
 //5
 // Prolog:
@@ -61,17 +71,32 @@ const addLength=(string)=>{
 //
 // Write function typeValidation that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
 
-///////////////////////////////////////////////////////
+const typeValidation=(variable,type)=>{
+    if (variable===type){
+        return true 
+    } else{
+        false;
+    }
+}
+
 //6
 // #Triple Trouble
 //
-// Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
+// Create a function that will return a string that combines all of the letters of the three inputed strings in groups.
+// Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
 //
 // Ex) Input: "aa", "bb" , "cc" => Output: "abcabc"
 //
 // Note: You can expect all of the inputs to be the same length.
 
-///////////////////////////////////////////////////////
+const group=(str1,str2,str3)=>{
+    let combine =[];
+    for(i=0;i<str1.length;i++){
+        combine.push(str1[i]+str2[i]+str3[i])
+    }
+    return combine.join('')
+}
+
 //7
 //Given a non-negative integer n, write a function toBinary/ToBinary which returns that number in a binary format.
 
