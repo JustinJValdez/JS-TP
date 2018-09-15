@@ -15,12 +15,14 @@ const init = (name) => {
     return (n[0][0] + '.' + n[1][0]).toUpperCase();
 }
 
-
 // 2
 // Write function makeUpperCase.
 
-makeUpperCase =()=>{
-    
+makeUpperCase =(n)=>{
+    let stuff = n.split('');
+    let toUpper = word.map(letter=>{return letter.toUpperCase()})
+    return toUpper.join('');
+
 }
 
 //3
@@ -32,13 +34,24 @@ makeUpperCase =()=>{
 
 // Note: String will have at least one element; words will always be separated by a space.
 
-///////////////////////////////////////////////////////
+
+const addLength=(string)=>{
+    let n = string.split(' ');
+    let numbers = n.map(number=>{return number.length})
+    let ret=[];
+   for(let i=0;i<n.length;i++){
+        ret.push(n[i]+' '+numbers[i])
+   } 
+   return ret.join(' ')
+
+}
+
 //4
 // Who likes keywords? Nobody likes keywords, so why use them?
 //
 // You know what keyword I use too much? if! We should make a function called _if, with its arguments as a logical test and two functions/lambdas where the first function is executed if the boolean is true, and the second if it's false, like an if/else statement, so that we don't have to mess around with those nasty keywords! Even so, It should support truthy/falsy types just like the keyword.
 
-///////////////////////////////////////////////////////
+
 //5
 // Prolog:
 //
